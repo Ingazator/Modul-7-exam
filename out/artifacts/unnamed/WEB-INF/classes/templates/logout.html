@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        p{
+            color: darkcyan;
+        }
+        .form{
+            margin-top: 300px;
+            text-align: center;
+            justify-content: center;
+        }
+        .form-btn{
+            margin-top: 20px;
+            background-color: black;
+            color: green;
+            width: 100px;
+            height: 30px;
+        }
+        .form-btn:hover{
+            color: red;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form action="/logout" method="post" class="form">
+        <p>Are you sure logout?</p>
+        <button type="submit" class="form-btn">YES</button>
+    </form>
+</div>
+</body>
+</html>

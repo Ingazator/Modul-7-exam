@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Content</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+        }
+        .input-like{
+            margin-right: 30px;
+        }
+        .form{
+            margin-top: 300px;
+            text-align: center;
+            justify-content: center;
+        }
+        .form-btn{
+            margin-top: 20px;
+            background-color: black;
+            color: green;
+            width: 150px;
+            height: 30px;
+        }
+        .form-btn:hover{
+            color: red;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<div>
+</div>
+<div>
+    <form th:action="@{/like/{id}(id=${content.id})}" method="get" class="form">
+        <p th:text="${content.getContent()}"/>
+        Comment:<input type="text" name="comment" placeholder="Comment">
+        <br>
+        <input type="hidden" th:value="${#authentication.name}" name="Email">
+        LIKE: <input type="checkbox" name="check" class="input-like">
+        <br>
+        <button type="submit" value="Submit" class="form-btn">Submit</button>
+        <p th:text="${error}"/>
+    </form>
+</div>
+</body>
+</html>

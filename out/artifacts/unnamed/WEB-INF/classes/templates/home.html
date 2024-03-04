@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1 style="color: darkcyan">Home page</h1>
+<div th:each="user:${list}">
+    <p th:text="${user.username}"></p>
+</div>
+
+<div th:object="${user}">
+    <h3 th:text="${username}"></h3>
+</div>
+</body>
+</html>

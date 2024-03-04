@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+        }
+        .form{
+            margin-top: 300px;
+            text-align: center;
+            justify-content: center;
+        }
+        .form-btn{
+            margin-top: 20px;
+            background-color: black;
+            color: green;
+            width: 150px;
+            height: 30px;
+        }
+        .form-btn:hover{
+            color: red;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form action="/signup" method="post" class="form">
+        <input type="text" name="username" placeholder="Username">
+        <br>
+        <input type="email" name="email" placeholder="Email">
+        <br>
+        <input type="password" name="password" placeholder="Password">
+        <br>
+        <input type="submit" value="Submit" class="form-btn">
+    </form>
+</div>
+</body>
+</html>
